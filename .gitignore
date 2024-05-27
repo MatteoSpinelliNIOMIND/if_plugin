@@ -1,4 +1,4 @@
 /node_modules
 .env
-computed.csv
-computed.yaml
+*.csv
+*.yaml
