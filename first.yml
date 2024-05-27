@@ -1,6 +1,0 @@
-name: first manifest file
-description: first manifest file
-initialize:
-  outputs: ["yaml", "csv"]
-  plugins: null
-tree: null

@@ -1,0 +1,55 @@
+name: "team-emissions"
+description: "Calculate the emissions of a team based on the duration of their activities and the carbon intensity of the grid."
+tags:
+initialize:
+  outputs:
+    - yaml
+    - csv
+  plugins:
+    "team-emissions":
+      path: "if-team-emissions-plugin"
+      method: TeamEmissions
+tree:
+  pipeline:
+    - team-emissions
+  children:
+    matteo:
+      defaults:
+        device: "HP 250"
+        grid-carbon-intensity: 331
+      inputs:
+        - timestamp: 2024-01-01T00:00
+          duration: 3600
+          name: "Matteo"
+          surname: "Spinelli"
+          project: "Consulting"
+        - timestamp: 2024-01-01T01:00
+          duration: 3600
+          name: "Matteo"
+          surname: "Spinelli"
+          project: "Consulting"
+        - timestamp: 2024-01-01T02:00
+          duration: 3600
+          name: "Matteo"
+          surname: "Spinelli"
+          project: "Consulting"
+    alessandro:
+      defaults:
+        device: "Lenovo thinkpad x1 carbon"
+        grid-carbon-intensity: 331
+      inputs:
+        - timestamp: 2024-01-01T00:00
+          duration: 3600
+          name: "Alessandro"
+          surname: "Pretori"
+          project: "Consulting"
+        - timestamp: 2024-01-01T01:00
+          duration: 3600
+          name: "Alessandro"
+          surname: "Pretori"
+          project: "Consulting"
+        - timestamp: 2024-01-01T02:00
+          duration: 3600
+          name: "Alessandro"
+          surname: "Pretori"
+          project: "Consulting"
